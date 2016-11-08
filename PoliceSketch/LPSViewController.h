@@ -10,4 +10,19 @@
 
 @interface LPSViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *eyesImageView;
+@property (weak, nonatomic) IBOutlet UIButton *eyesLeftButton;
+@property (weak, nonatomic) IBOutlet UIButton *eyesRightButton;
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *nosesImageView;
+@property (weak, nonatomic) IBOutlet UIButton *nosesLeftButton;
+@property (weak, nonatomic) IBOutlet UIButton *nosesRightButton;
+
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *mouthsImageView;
+@property (weak, nonatomic) IBOutlet UIButton *mouthsLeftButton;
+@property (weak, nonatomic) IBOutlet UIButton *mouthsRightButton;
+
 @end

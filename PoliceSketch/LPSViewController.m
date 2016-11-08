@@ -7,8 +7,11 @@
 //
 
 #import "LPSViewController.h"
+#import "LPSSketchesDataSource.h"
 
 @interface LPSViewController ()
+
+@property (nonatomic, strong) LPSSketchesDataSource * sketchesDataSource;
 
 @end
 
@@ -19,6 +22,32 @@
     [super viewDidLoad];
 	
     // Here is where you will create the buttons & image views and add them to the view.
+    
+    self.sketchesDataSource = [[LPSSketchesDataSource alloc] init];
+    self.eyesImageView.image = self.sketchesDataSource.currentEyes;
+}
+
+- (IBAction)nextEyes:(UIButton *)sender {
+    self.eyesImageView.image = self.sketchesDataSource.nextEyes;
+}
+
+- (IBAction)previousEyes:(UIButton *)sender {
+    self.eyesImageView.image = self.sketchesDataSource.previousEyes;
+}
+    
+- (IBAction)nextNoses:(UIButton *)sender {
+        self.nosesImageView.image = self.sketchesDataSource.nextNoses;
+    }
+    
+- (IBAction)previousNoses:(UIButton *)sender {
+        self.nosesImageView.image = self.sketchesDataSource.previousNoses;
+}
+- (IBAction)nextMouths:(UIButton *)sender {
+        self.mouthsImageView.image = self.sketchesDataSource.nextMouths;
+    }
+    
+- (IBAction)previousMouths:(UIButton *)sender {
+        self.mouthsImageView.image = self.sketchesDataSource.previousMouths;
 }
 
 @end
